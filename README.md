@@ -28,5 +28,5 @@ HOME=/mnt/sdb/Dropbox/ ~/dropbox.py start -i
 HOME=/mnt/sdb/Dropbox/ ~/dropbox.py status
 
 #backup level0
-tar cvf dropbox.lv0.2018-12-31.SERIAL.tar -M -L4G -F /mnt/sdb/Dropbox/glacier-backup-scripts/volume_change_script.sh -g dropbox.lv0.2018-12-31.incremental-file.snar --level=0 --no-check-device -C /mnt/sdb/Dropbox/Dropbox
+tar cvf dropbox.lv0.2018-12-31.001.tar -M -L4G -F /mnt/sdb/Dropbox/glacier-backup-scripts/volume_change_script.sh -g dropbox.lv0.2018-12-31.incremental-file.snar --level=0 --no-check-device -C /mnt/sdb/Dropbox/Dropbox
 ```
