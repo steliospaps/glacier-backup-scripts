@@ -14,5 +14,5 @@ NAME=${TAR_ARCHIVE/.[0-9][0-9][0-9]./.$NUMBER.}
 echo NAME=$NAME
 echo ${NAME} >&$TAR_FD
 #bzip2 $TAR_ARCHIVE 
-gzip $TAR_ARCHIVE 
+#gzip $TAR_ARCHIVE 
 
