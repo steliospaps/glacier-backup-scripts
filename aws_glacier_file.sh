@@ -15,7 +15,7 @@ for f in "$@"
 do
 	FILENAME=${f##*/}
 	echo $FILENAME >> $CONTENTS_FILE || exit 1
-	aws glacier upload-archive --account-id - --vault-name $VAULT --archive-description $FILENAME --body $f  >> $CONTENTS_FILE || exit $?
+	aws --region=eu-west-1 glacier upload-archive --account-id - --vault-name $VAULT --archive-description $FILENAME --body $f  >> $CONTENTS_FILE || exit $?
 done
 
 aws s3 cp "$CONTENTS_FILE" "s3://stelios-bucket/vaults/backup/$CONTENTS_FILENAME" 
